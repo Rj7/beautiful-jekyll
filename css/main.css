@@ -52,6 +52,8 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .main-content {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
     padding-top: 130px;
   }
 }
@@ -96,6 +98,11 @@ img {
   .disqus-comments {
     margin-top: 40px;
   }
+}
+
+.linked-section {
+  padding-top: 60px;
+  margin-top: -25px;
 }
 
 /* --- Navbar --- */
@@ -202,6 +209,11 @@ img {
   .navbar-custom .avatar-container  .avatar-img {
     width: 100%;
   }
+}
+
+.container-fluid  {
+  padding-left: max(15px, env(safe-area-inset-left));
+  padding-right: max(15px, env(safe-area-inset-right));
 }
 
 /* Multi-level navigation links */
@@ -398,7 +410,7 @@ footer .theme-by {
 .blog-tags a:hover {
   border-radius: 2px;
   color: {{ site.hover-col }};
-  background-color: #CCC;
+  background-color: #EEE;
 }
 
 .post-preview .blog-tags {
@@ -683,6 +695,9 @@ td.gutter pre {
 .highlight > pre {
   padding: 0;
 }
+.highlight > pre.highlight {
+  padding: 9.5px;
+}
 td.code pre {
   border-width: 0 0 0 2px;
   border-style: solid;
@@ -733,7 +748,7 @@ td.gutter {
   border: unset;
 }
 
-/* fix .navbar-toggle */
+/* Fix .navbar-toggle */
 
 .navbar-default button.navbar-toggle:focus,
 .navbar-default button.navbar-toggle:hover {
@@ -742,4 +757,28 @@ td.gutter {
 
 .navbar-default button.navbar-toggle[aria-expanded="true"] {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Tags page */
+
+.tag-btn {
+  margin: 5px;
+}
+
+#full-tags-list {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#full-tags-list .tag-entry {
+  margin: 0 0 15px 25px;
+}
+
+#full-tags-list .tag-entry a {
+  font-size: 20px;
+}
+
+#full-tags-list .tag-entry .entry-date {
+  color: #808080;
+  font-style: italic;
+  font-size: 16px;
 }
