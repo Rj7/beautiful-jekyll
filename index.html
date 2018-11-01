@@ -9,10 +9,10 @@ bigimg:
 use-site-title: true
 css: '/css/home.css'
 ---
-Hi! I’m Raja Gunasekaran, a graduate student at UNBC, Canada. I also work as web and mobile application developer. Passionate python dev.
+<!--Hi! I’m Raja Gunasekaran, a graduate student at UNBC, Canada. I also work as web and mobile application developer. Passionate python dev.-->
 
-I love languages (mostly natural). I like learning them. I like it even better when machine learns them too.
-Currently working on understanding how to make machines learn natural languages.
+<!--I love languages (mostly natural). I like learning them. I like it even better when machine learns them too.-->
+<!--Currently working on understanding how to make machines learn natural languages.-->
 
 <!--
 <h1 class="text-center">Current Projects</h1>
@@ -76,8 +76,8 @@ Currently working on understanding how to make machines learn natural languages.
 
 ---- -->
 
-<h1 class="text-center">Recent Posts</h1>
-<div class="spacer"></div>
+<!--<h1 class="text-center">Recent Posts</h1>-->
+<!--<div class="spacer"></div>-->
 
 <div class="posts-list">
   {% for post in site.posts limit:5 %}
@@ -130,8 +130,17 @@ Currently working on understanding how to make machines learn natural languages.
   {% endfor %}
 </div>
 
+{% if paginator.total_pages > 1 %}
 <ul class="pager main-pager">
-  <li>
-    <a href="{{site.baseurl}}/blog">Archive </a>
+  {% if paginator.previous_page %}
+  <li class="previous">
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
   </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+  </li>
+  {% endif %}
 </ul>
+{% endif %}
