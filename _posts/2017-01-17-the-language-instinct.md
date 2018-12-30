@@ -2,7 +2,7 @@
 layout: post
 title: The Language Instinct - Review 
 subtitle: How the mind creates language
-tags: [Books, Review, ]
+tags: [Books, Review, English]
 ---
 
 I started this book hoping to get the basics of linguistics for one of my projects. I am very glad I went on with this book and not Chomsky’s Syntactic Structures (Read few pages and couldn’t understand anything). This book was like a quick crash course on linguistics. While most of Steven Pinker, professor of psychology at Harvard, work is build on Noam Chomsky’s Universal Grammar, he differs from Chomsky’s theory on various instances
